@@ -1,0 +1,12 @@
+{
+    "program": ["nexus", "global_entry"],
+    "locations": {
+        "nexus": [5020],
+        "global_entry": [5002]
+    },
+    "check_interval": [10, 20],
+    "notifications": {
+        "email": true,
+        "telegram": true
+    }
+}
