@@ -200,6 +200,7 @@ Once configured correctly, you will receive notifications when slots are availab
   ![Example email screenshot](assets/email_notification.png)
 
 - **Telegram Notification**:
+
   ![Example Telegram screenshot](assets/telegram_notification.png)
 
 ---
