@@ -1,12 +1,12 @@
 {
     "programs": ["nexus", "global_entry"],
     "locations": {
-        "nexus": [16546],
-        "global_entry": [13321]
+        "nexus": [5020],
+        "global_entry": [5360]
     },
     "check_interval": [10, 20],
     "notifications": {
-        "email": true,
+        "email": false,
         "telegram": true
     },
     "limit": 5,

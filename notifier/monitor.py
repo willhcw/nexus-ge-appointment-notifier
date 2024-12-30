@@ -88,14 +88,15 @@ End Date: {end_date}
                 else:
                     logging.info(f"No available slots for {program.upper()} at location {location_id}.")
 
-        # Print all available slots
-        logging.info("\n".join(messages))
+        # If there are available slots, Print all available slots
+        if messages:
+            logging.info("\n".join(messages))
 
-        # Send notifications
-        notification_message = "\n".join(messages)
-        if notifications.get("email"):
-            send_email(f"Appointment Found", notification_message),
-        if notifications.get("telegram"):
-            send_telegram(notification_message)
+            # Send notifications only if there are available slots
+            notification_message = "\n".join(messages)
+            if notifications.get("email") and notification_message:
+                send_email(f"Appointment Found", notification_message),
+            if notifications.get("telegram") and notification_message:
+                send_telegram(notification_message)
 
         time.sleep(random.randint(*check_interval))
